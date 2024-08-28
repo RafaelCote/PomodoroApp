@@ -1,0 +1,9 @@
+Description du projet
+Petit horloge à promodoro. 
+
+Features désirés:
+-Timer descendant
+-Notifications
+-Configuration de scéance
+   -Temps travail
+   -Temps pause
