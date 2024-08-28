@@ -5,8 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PromodoroApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="400" Width="300">
     <Grid>
-
+        <!--<TextBlock Name="txtTime" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="38">Place Holder</TextBlock>-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        
+        <!-- Menu Bar -->
+        <Rectangle Grid.Row="0" Fill="SlateGray"></Rectangle>
+        
+        <!-- Content -->
+        <Rectangle Grid.Row="1" Fill="White"></Rectangle>
     </Grid>
 </Window>
