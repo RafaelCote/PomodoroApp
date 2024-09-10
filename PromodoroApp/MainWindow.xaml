@@ -18,6 +18,14 @@
         <Rectangle Grid.Row="0" Fill="SlateGray"></Rectangle>
         
         <!-- Content -->
-        <userControls:Timer Grid.Row="1"></userControls:Timer>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <userControls:TimerUserControl Grid.Row="0"></userControls:TimerUserControl>
+            
+            <TextBlock Grid.Row="1" Name="lblTimeUp" Text="Timer's up!" Visibility="Hidden" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+        </Grid>
     </Grid>
 </Window>
