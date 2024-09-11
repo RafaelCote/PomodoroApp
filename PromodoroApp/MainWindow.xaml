@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PromodoroApp"
         xmlns:userControls="clr-namespace:PromodoroApp.View.UserControls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="300">
+        Title="MainWindow" Height="400" Width="400">
     <Grid>
         <!--<TextBlock Name="txtTime" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="38">Place Holder</TextBlock>-->
         <Grid.RowDefinitions>
@@ -20,12 +20,12 @@
         <!-- Content -->
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
-            <userControls:TimerUserControl Grid.Row="0"></userControls:TimerUserControl>
+            <userControls:TimerUserControl Grid.Row="0"/>
             
-            <TextBlock Grid.Row="1" Name="lblTimeUp" Text="Timer's up!" Visibility="Hidden" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="1" Name="lblTimeUp" Text="Timer's up!" Visibility="Hidden" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         </Grid>
     </Grid>
 </Window>
