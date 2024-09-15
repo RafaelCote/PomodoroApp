@@ -8,38 +8,32 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="3*"/>
-            <ColumnDefinition Width="1*"/>
-        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
         
-        <Grid Grid.Column="0">
-            
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            
-            <Button Name="btnLess" Grid.Row="1" Click="BtnLess_OnClick">
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <Button Name="_btnLess" Grid.Column="0" Click="BtnLess_OnClick">
                 <Image Name="imgLess" />
             </Button>
-        </Grid>
-        
-        <TextBlock Name="tbTimer" Text="0:00" FontSize="96" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1"/>
-        
-        <Grid Grid.Column="2">
             
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
+            <TextBlock Name="_tbTimer" Text="0:00" FontSize="96" HorizontalAlignment="Center" VerticalAlignment="Center"
+                       Grid.Column="1" />
             
-            <Button Name="btnMore" Grid.Row="1" Click="BtnMore_OnClick">
+            <Button Name="_btnMore" Grid.Column="2" Click="BtnMore_OnClick">
                 <Image Name="imgMore" />
             </Button>
         </Grid>
+        
+        <Button Name="_btnStart" Width="150" Height="50" Content="Start Timer" Grid.Row="2" Click="BtnStart_OnClick"/>
+        <Button Name="_btnStop" Width="150" Height="50" Content="Stop Timer" Grid.Row="2" Visibility="Hidden" Click="_btnStop_OnClick_OnClick"/>
     </Grid>
 </UserControl>

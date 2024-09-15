@@ -21,11 +21,9 @@
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="4*"/>
-                <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
-            <userControls:TimerUserControl Grid.Row="0"/>
             
-            <TextBlock Grid.Row="1" Name="lblTimeUp" Text="Timer's up!" Visibility="Hidden" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <userControls:TimerUserControl Grid.Row="0"/>
         </Grid>
     </Grid>
 </Window>

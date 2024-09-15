@@ -10,9 +10,8 @@ public class Timer
     private DispatcherTimer _timer = null;
     private TimeSpan _time = default;
 
-    public Timer(double duration)
+    public Timer()
     {
-        _time = TimeSpan.FromSeconds(duration);
         _timer = new DispatcherTimer();
         _timer.Tick += Timer_Tick;
         _timer.Interval = TimeSpan.FromSeconds(1);
@@ -28,12 +27,27 @@ public class Timer
         _timer.Start();
         return _time;
     }
+
+    public void Stop()
+    {
+        _timer.Stop();
+        SetTime(0);
+        Expired?.Invoke(this, EventArgs.Empty);
+    }
+
+    public void SetTime(double minutes)
+    {
+        _time = TimeSpan.FromMinutes(minutes);
+    }
     
     private void Timer_Tick(object? sender, EventArgs args)
     {
         _time = _time.Subtract(TimeSpan.FromSeconds(1));
         if (_time == TimeSpan.Zero)
+        {
             _timer.Stop();
+            Expired?.Invoke(this, EventArgs.Empty);
+        }
         Ticked?.Invoke(this, _time);
     }
 }
