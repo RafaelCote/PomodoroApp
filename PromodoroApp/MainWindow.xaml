@@ -6,23 +6,19 @@
         xmlns:local="clr-namespace:PromodoroApp"
         xmlns:userControls="clr-namespace:PromodoroApp.View.UserControls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="400">
+        Title="MainWindow" Height="400" Width="400" Background="#222222">
     <Grid>
         <!--<TextBlock Name="txtTime" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="38">Place Holder</TextBlock>-->
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="25"/>
             <RowDefinition />
         </Grid.RowDefinitions>
         
         <!-- Menu Bar -->
-        <Rectangle Grid.Row="0" Fill="SlateGray"></Rectangle>
+        <Rectangle Grid.Row="0" Fill="LightGray"></Rectangle>
         
         <!-- Content -->
         <Grid Grid.Row="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="4*"/>
-            </Grid.RowDefinitions>
-            
             <userControls:TimerUserControl Grid.Row="0"/>
         </Grid>
     </Grid>
