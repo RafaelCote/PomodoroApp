@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:PromodoroApp"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         <ResourceDictionary>
+        <ResourceDictionary>
              <ResourceDictionary.MergedDictionaries>
                  <ResourceDictionary Source="Styles/ButtonStyle.xaml"/>
              </ResourceDictionary.MergedDictionaries>

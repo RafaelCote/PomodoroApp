@@ -7,7 +7,6 @@
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="3*"/>
@@ -22,7 +21,7 @@
             </Grid.ColumnDefinitions>
 
             <Button Name="_btnLess" Width="50" Height="75" Grid.Column="0" Click="BtnLess_OnClick">
-                <Image Name="imgLess" />
+                <Image Source="../../Resources/arrowLeft.png"/>
             </Button>
             
             <TextBlock Name="_tbTimer" Text="0:00"
@@ -33,11 +32,15 @@
                        Grid.Column="1" />
             
             <Button Name="_btnMore" Width="50" Height="75" Grid.Column="2" Click="BtnMore_OnClick">
-                <Image Name="imgMore"/>
+                <Image Source="../../Resources/arrowRight.png"/>
             </Button>
         </Grid>
         
-        <Button Name="_btnStart" Width="150" Height="50" Content="Start Timer" Grid.Row="2" Click="BtnStart_OnClick"/>
-        <Button Name="_btnStop" Width="150" Height="50" Content="Stop Timer" Grid.Row="2" Visibility="Hidden" Click="_btnStop_OnClick_OnClick"/>
+        <Button Name="_btnStart" Width="150" Height="50" Grid.Row="2" Click="BtnStart_OnClick">
+            <Image Source="../../Resources/play.png"/>
+        </Button>
+        <Button Name="_btnStop" Width="150" Height="50"  Grid.Row="2" Visibility="Hidden" Click="_btnStop_OnClick_OnClick">
+            <Image Source="../../Resources/pause.png"/>
+        </Button>
     </Grid>
 </UserControl>
