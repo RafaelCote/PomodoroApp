@@ -4,32 +4,4 @@
     <SolidColorBrush x:Key="Button.Static.Foreground" Color="#222222"/>
     <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#C96363"/>
     <SolidColorBrush x:Key="Button.Pressed.Background" Color="#b31b1b"/>
-    
-    <Style TargetType="Button">
-        <Setter Property="MaxHeight" Value="100"/>
-        <Setter Property="MaxWidth" Value="100"/>
-        
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="Button">
-                    <Border Background="{StaticResource Button.Static.Background}"
-                            x:Name="border"
-                            CornerRadius="25">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsDefaulted" Value="true">
-                        </Trigger>
-                        <Trigger Property="IsMouseOver" Value="true">
-                            <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
-                        </Trigger>
-                        <Trigger Property="IsPressed" Value="true">
-                            <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-        
-    </Style>
 </ResourceDictionary>

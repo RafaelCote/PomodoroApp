@@ -77,7 +77,7 @@ public partial class TimerUserControl : UserControl
         _btnStop.Visibility = Visibility.Visible;
     }
 
-    private void _btnStop_OnClick_OnClick(object sender, RoutedEventArgs e)
+    private void BtnStop_OnClick(object sender, RoutedEventArgs e)
     {
         _timer.Stop();
     }
